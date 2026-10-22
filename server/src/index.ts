@@ -7,8 +7,9 @@ import { registerRoutes } from "./router";
 import { errorHandler } from "./middleware/error-handler.middleware";
 const app = express();
 const clientUrl = process.env.CLIENT_URL ?? "http://localhost:3000";
-
-
+import { serve } from "inngest/express";
+import { inngest } from "./inngest/client"
+import {functions} from './inngest/index'
 app.use(
     cors({
         origin: clientUrl,
@@ -22,6 +23,8 @@ app.get("/" , (req , res)=>{
     res.send("Hello LLM");
 })
 
+// Set up the "/api/inngest" (recommended) routes with the serve handler
+app.use("/api/inngest", serve({ client: inngest, functions }));
 
 registerRoutes(app);
 

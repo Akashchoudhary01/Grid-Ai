@@ -5,6 +5,10 @@ import type {
     UserMemory,
 } from "./types";
 
+export const memoryRoutes = {
+    settings: "/memory",
+};
+
 export function listMemories() {
     return apiFetch<UserMemory[]>("/api/memory");
 }

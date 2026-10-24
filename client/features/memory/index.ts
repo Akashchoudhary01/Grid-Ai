@@ -1,4 +1,10 @@
-export { MemorySettings } from "./components/memory-settings";
+export { MemorySettings } from "./components/memory-setting";
 export { MemoryFormDialog } from "./components/memory-form-dialog";
-export { memoryRoutes } from "./lib/routes";
+export {
+    memoryRoutes,
+    listMemories,
+    createMemory,
+    updateMemory,
+    deleteMemory,
+} from "./lib/routes";
 export type { UserMemory } from "./lib/types";

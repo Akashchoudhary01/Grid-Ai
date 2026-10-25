@@ -6,7 +6,7 @@ import {
     HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import type { ChatCitation } from "../lib/types";
-import { CitationPreview } from "./citation-preview";
+import { CitationPreview } from "./catation-preview";
 
 type CitationMarkerProps = {
     index: number;

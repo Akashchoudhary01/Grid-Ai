@@ -29,9 +29,9 @@ import {
 import { SOURCE_TYPE_LABELS } from "@/features/sources/lib/constants";
 import type { SourceType } from "@/features/sources/lib/types";
 import { sourceRoutes } from "@/features/sources/lib/routes";
-import { uniqueCitationsBySource } from "../lib/citations";
+import { uniqueCitationsBySource } from "../lib/citation";
 import type { ChatCitation } from "../lib/types";
-import { CitationPreview } from "./citation-preview";
+import { CitationPreview } from "./catation-preview";
 
 type CitationSourcesProps = {
     workspaceId: string;

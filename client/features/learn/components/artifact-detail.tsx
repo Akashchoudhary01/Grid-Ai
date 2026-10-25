@@ -9,7 +9,7 @@ import { ApiError } from "@/shared/lib/api";
 import { ARTIFACT_TYPE_LABELS } from "../lib/constants";
 import { learnRoutes } from "../lib/routes";
 import { useArtifact } from "../hooks/use-artifacts";
-import { ArtifactContentViewer } from "./artifact-content-viewer";
+import { ArtifactContentViewer } from "./artifacts-content-viewer";
 import {
     ArtifactStatusBadge,
     ArtifactTypeBadge,

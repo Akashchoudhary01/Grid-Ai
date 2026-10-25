@@ -4,9 +4,9 @@
 import { useMemo } from "react";
 import { Streamdown } from "streamdown";
 import { code } from "@streamdown/code";
-import { getCitationByIndex } from "../lib/citations";
+import { getCitationByIndex } from "../lib/citation";
 import type { ChatCitation } from "../lib/types";
-import { CitationMarker } from "./citation-marker";
+import { CitationMarker } from "./catation-maker";
 
 type ChatMessageBodyProps = {
     text: string;

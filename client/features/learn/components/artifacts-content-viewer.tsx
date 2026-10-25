@@ -2,8 +2,8 @@
 
 import type { LearningArtifact } from "../lib/types";
 import { FlashcardsViewer } from "./viewers/flashcards-viewer";
-import { MindMapViewer } from "./viewers/mindmap-viewer";
-import { QuizViewer } from "./viewers/quiz-viewer";
+import { MindMapViewer } from "./viewers/mindmap.viewer";
+import { QuizViewer } from "./viewers/quiz.viewer";
 import { ReportViewer } from "./viewers/report-viewer";
 import { SummaryViewer } from "./viewers/summary-viewer";
 import { TakeawaysViewer } from "./viewers/takeaways-viewer";

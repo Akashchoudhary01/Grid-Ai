@@ -44,13 +44,13 @@ import {
     useConversations,
     useCreateConversation,
     useDeleteConversation,
-} from "../hooks/use-conversations";
+} from "../hooks/use-conversation";
 import { ChatMessageBody } from "./chat-message-body";
-import { CitationSources } from "./citation-sources";
+import { CitationSources } from "./catation-sources";
 import { ChatComposer } from "./chat-composer";
 import type { ChatCitation } from "../lib/types";
 import { workspaceRoutes } from "@/features/workspaces/lib/routes";
-import { useChatPreferences } from "../stores/chat-preferences";
+import { useChatPreferences } from "../store/chat-preferences";
 import {
     downloadMarkdown,
     exportConversationMarkdown,

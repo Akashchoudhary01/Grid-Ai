@@ -4,19 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
-import {
-    Field,
-    FieldDescription,
-    FieldGroup,
-    FieldSeparator,
-} from "@/components/ui/field";
+import { Field, FieldDescription, FieldGroup } from "@/components/ui/field";
 import { Spinner } from "@/components/ui/spinner";
 import { signIn } from "../lib/auth-client";
 import { authRoutes } from "../lib/auth-routes";
@@ -83,51 +71,48 @@ export function LoginForm({
     }
 
     return (
-        <div className={cn("flex flex-col gap-6", className)} {...props}>
-            <Card>
-                <CardHeader className="text-center">
-                    <CardTitle className="text-xl">Welcome back</CardTitle>
-                    <CardDescription>
-                        Sign in with Google to continue to Chaibook
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <form
-                        onSubmit={(event) => {
-                            event.preventDefault();
-                            void handleGoogleSignIn();
-                        }}
-                    >
-                        <FieldGroup>
-                            <Field>
-                                <Button
-                                    type="submit"
-                                    variant="outline"
-                                    className="w-full"
-                                    disabled={isLoading}
-                                >
-                                    {isLoading ? (
-                                        <Spinner />
-                                    ) : (
-                                        <GoogleIcon />
-                                    )}
-                                    Continue with Google
-                                </Button>
-                                <FieldDescription className="text-center">
-                                    By continuing, you agree to our terms of
-                                    service and privacy policy.
-                                </FieldDescription>
-                            </Field>
-                            <FieldSeparator>Secure sign-in</FieldSeparator>
-                            {error ? (
-                                <p className="text-center text-sm text-destructive">
-                                    {error}
-                                </p>
-                            ) : null}
-                        </FieldGroup>
-                    </form>
-                </CardContent>
-            </Card>
+        <div className={cn("flex flex-col gap-8", className)} {...props}>
+            <div className="space-y-2">
+                <h1 className="font-heading text-3xl font-semibold tracking-tight">
+                    Welcome back
+                </h1>
+                <p className="text-muted-foreground">
+                    Sign in to continue to Codebook.
+                </p>
+            </div>
+
+            <form
+                onSubmit={(event) => {
+                    event.preventDefault();
+                    void handleGoogleSignIn();
+                }}
+            >
+                <FieldGroup>
+                    <Field>
+                        <Button
+                            type="submit"
+                            size="lg"
+                            variant="outline"
+                            className="w-full"
+                            disabled={isLoading}
+                        >
+                            {isLoading ? <Spinner /> : <GoogleIcon />}
+                            Continue with Google
+                        </Button>
+                    </Field>
+
+                    {error ? (
+                        <p role="alert" className="text-sm text-destructive">
+                            {error}
+                        </p>
+                    ) : null}
+
+                    <FieldDescription>
+                        By continuing, you agree to our terms of service and
+                        privacy policy.
+                    </FieldDescription>
+                </FieldGroup>
+            </form>
         </div>
     );
 }

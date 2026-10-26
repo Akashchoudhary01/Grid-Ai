@@ -17,7 +17,7 @@ import {
     CHAT_MODEL_LABELS,
     CHAT_MODELS,
     type ChatModelId,
-} from "@/features/chat/stores/chat-preferences";
+} from "@/features/chat/store/chat-preferences";
 import {
     useDeleteWorkspace,
     useUpdateWorkspace,

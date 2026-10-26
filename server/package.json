@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+      "inngest": "inngest-cli dev -u http://localhost:8080/api/inngest"
   },
   "keywords": [],
   "type": "commonjs",
